@@ -1,9 +1,0 @@
-{{> header}}
-
-<div class="container">
-<article>
-  {{{contents}}}
-</article>
-</div>
-
-{{> footer}}
