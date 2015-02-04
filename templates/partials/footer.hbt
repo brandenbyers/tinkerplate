@@ -7,7 +7,7 @@
       <a href="#stackoverflow"><img src="/img/svg-social/stackoverflow.svg" alt=""></a>
       <a href="#instagram"><img src="/img/svg-social/instagram.svg" alt=""></a>
     </div>
-    <div class="copy">&copy; 2015</div>
+    <div class="copy">&copy; 2015 {{globals.name}}</div>
   </section>
 </footer>
 
