@@ -1,0 +1,15 @@
+<footer>
+  <section class="text-center">
+    <div class="social">
+      <a href="#twitter"><img src="/img/svg-social/twitter.svg" alt=""></a>
+      <a href="#linkedin"><img src="/img/svg-social/linkedin.svg" alt=""></a>
+      <a href="#github"><img src="/img/svg-social/github.svg" alt=""></a>
+      <a href="#stackoverflow"><img src="/img/svg-social/stackoverflow.svg" alt=""></a>
+      <a href="#instagram"><img src="/img/svg-social/instagram.svg" alt=""></a>
+    </div>
+    <div class="copy">&copy; 2015</div>
+  </section>
+</footer>
+
+</body>
+</html>

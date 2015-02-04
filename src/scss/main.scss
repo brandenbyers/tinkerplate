@@ -1,0 +1,532 @@
+@import "../../bower_components/sassy-gridlover/sassy-gridlover/sassy-gridlover.scss";
+
+// Config for Sassy Gridlover
+$sgl-base-font-size: 18;
+$sgl-base-line-height: 1.9;
+$sgl-scale-factor: 1.4;
+
+// Fonts
+$font-primary: "Open Sans", sans-serif;
+$font-mono: "Inconsolata", Menlo, "Courier New", Courier, monospace;
+
+// Colors
+$black: #33373a;
+$white: #FFFFFF;
+$gray: #EEEEEE;
+$dark-gray: #403E3B;
+$light-blue: #E9F4F4;
+$yellow: #F9EE70;
+$light-pink: #F9E3DE;
+
+// Defaults
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  padding: 0 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+// Border-Box
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 300;
+  color: $black;
+  @include sassy-gridlover-body($sgl-base-font-size, true);
+  margin: 0;
+  padding: 0;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+article {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  position: relative;
+}
+
+h1 {
+  @include sassy-gridlover-heading(3, true);
+}
+h2 {
+  @include sassy-gridlover-heading(2, true);
+}
+h3 {
+  @include sassy-gridlover-heading(1, true);
+}
+h4 {
+  @include sassy-gridlover-heading(0, true);
+}
+
+p, ul, ol, pre, table, blockquote {
+  @include sassy-gridlover-margins(true);
+}
+
+pre {
+  padding: 0 15px;
+  font-family: $font-mono;
+  font-size: 14px;
+  line-height: 20px;
+  border-left: 4px solid $gray;
+}
+
+blockquote {
+  position:relative;
+  width: 96%;
+  @media (max-width: 800px) {
+    margin: 0 auto;
+  }
+  @media (min-width: 800px) {
+    width: 90vw;
+    left: calc(-48vw + 50%);
+  }
+  @media (min-width: 1460px) {
+    width: 70vw;
+    left: calc(-35vw + 44%);
+  }
+  padding: 15px 60px 15px;
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 100;
+  color:#fff;
+  background:#333;
+}
+
+blockquote:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 25px;
+  border-width: 20px 30px 0 0;
+  border-style: solid;
+  border-color: $black transparent;
+  transform: skewX(-15deg);
+}
+
+.credit {
+  margin: 1em 0 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.credit:before {
+  content: ": : ";
+}
+
+// Buttons
+
+button {
+  border: none;
+  font-size: 17px;
+  font-weight: 100;
+  color: #fff;
+  background: $black;
+  cursor: pointer;
+  padding: 20px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  border: 2px dashed $black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  position: relative;
+  transition: none;
+}
+
+button:after {
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+button:active {
+  top: 2px;
+}
+
+button:hover, button:focus {
+  background: transparent;
+  color: $black;
+}
+
+// Links
+
+a {
+  text-decoration: none;
+  border-bottom: 2px solid $gray;
+  text-transform: uppercase;
+  color: inherit;
+  padding: 0.2em;
+  transition: all 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: $gray;
+  background-color: $black;
+  border: none;
+}
+
+.heading-anchor {
+  border: none;
+  width: 20px;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -35px;
+  cursor: pointer;
+  position: absolute;
+  text-decoration: none;
+  height: 100%;
+  background: transparent;
+  color: darken($gray, 30%);
+  vertical-align: middle;
+}
+
+.heading-anchor:hover, .heading-anchor:focus {
+  background-color: transparent;
+}
+
+h2:hover .heading-anchor span:before,
+h3:hover .heading-anchor span:before,
+h4:hover .heading-anchor span:before {
+  content: "#";
+  font-size: 25px;
+  font-weight: 700;
+  color: darken($gray, 30%);
+  background-color: transparent;
+  transition: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+// Header
+
+header {
+  max-width: fill-available;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  padding: 16px 0 0 0;
+}
+
+header .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo-text {
+  font-weight: 300;
+  font-size: 17px;
+  position: absolute;
+  padding: 3px 0 0 10px;
+}
+
+nav {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+nav ul {
+  display: table-row;
+  font-family: $font-primary;
+  font-size: 14px;
+  text-align: right;
+  margin: 0;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+//  padding: 0 8px 0 8px;
+  text-align: center;
+}
+
+header a {
+  border: none;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  border: none;
+  width: 60px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+header a:hover, header a:hover {
+  background-color: transparent;
+  color: darken($gray, 40%);
+}
+
+nav ul a:hover, nav ul a:focus {
+  background-color: $white;
+  color: darken($gray, 40%);
+}
+
+// Footer
+
+footer {
+  background: $gray;
+  max-width: fill-available;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+footer .text-center {
+  text-align: center;
+  padding: 122px 0 0 0;
+}
+
+footer img {
+  width: 40px;
+  @media (max-width: 480px) {
+    width: 60px;
+  }
+  padding: 0 10px;
+  margin: 0;
+  opacity: 0.7;
+  transition: transform ease-out 0.1s;
+}
+
+footer img:hover, footer img:focus {
+  opacity: 1;
+  transform: scale(0.9);
+}
+
+footer .copy {
+  font-size: 12px;
+  padding: 9px 0 0 0;
+  color: darken( $gray, 30% );
+}
+
+footer a {
+  border: none;
+}
+
+footer a:hover{
+  background-color: transparent;
+}
+
+// Blog List
+
+.lead-center {
+  padding: 0 0 80px 0;
+}
+
+.lead-center h1 {
+  text-align: center;
+  margin: 0;
+  padding: 100px 0 0 0;
+}
+
+.lead-center h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.lead-center h3 {
+  line-height: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  padding: 10px 10px 0 10px;
+}
+
+.lead-center p {
+}
+
+.lead-center article {
+  font-size: 15px;
+  line-height: 26px;
+  padding: 0 28px 10px 28px;
+}
+
+.lead-center a {
+  border: none;
+  text-transform: capitalize;
+  background-color: transparent;
+}
+
+// 404 Page Not Found
+
+.lead-bottom {
+  max-width: 900px;
+  height: 100vh;
+  position: relative;
+}
+
+.lead-bottom section {
+  position: absolute;
+  bottom: 80px;
+}
+
+.lead-bottom h2 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+  bottom: 40px;
+}
+
+.lead-bottom h2 .email {
+  text-transform: lowercase;
+}
+
+// Background Colors
+
+$black: #33373a;
+$white: #FFFFFF;
+$gray: #EEEEEE;
+$dark-gray: #403E3B;
+$light-blue: #E9F4F4;
+$yellow: #F9EE70;
+$light-pink: #F9E3DE;
+.b-gray {
+  background: $gray;
+}
+
+.b-blue {
+  background: $light-blue;
+}
+
+.b-yellow {
+  background: $yellow;
+}
+
+.b-pink {
+  background: $light-pink;
+}
+
+.b-white {
+  background: $white;
+}
+
+// Highlight.js
+
+/*
+    Name:       Base16 Eighties Light
+    Author:     Chris Kempson (http://chriskempson.com)
+    highlight.js v8.0 template by Jan T. Sott (https://github.com/idleberg/base16-highlight.js)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+*/
+
+/* Eighties Comment */
+.hljs-comment,
+.hljs-title {
+  color: #747369;
+}
+
+/* Eighties Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #f2777a;
+}
+
+/* Eighties Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #f99157;
+}
+
+/* Eighties Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #ffcc66;
+}
+
+/* Eighties Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #99cc99;
+}
+
+/* Eighties Aqua */
+.css .hljs-hexcolor {
+  color: #66cccc;
+}
+
+/* Eighties Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #6699cc;
+}
+
+/* Eighties Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #cc99cc;
+}
+
+.hljs {
+  display: block;
+  background: $white;
+  color: #515151;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}

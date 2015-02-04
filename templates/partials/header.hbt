@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300|Inconsolata:400,700' rel=stylesheet>
+</head>
+<body>
+<header class="{{bheader}}">
+  <div class="container">
+  <a class="logo-text" href='/'>Your Name Here</a>
+  <nav>
+    <ul>
+      <li> <a href='/work'>Work</a></li>
+      <li> <a href='/blog'>Blog</a></li>
+      <li> <a href='/contact'>Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>

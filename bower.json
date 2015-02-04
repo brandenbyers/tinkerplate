@@ -1,0 +1,20 @@
+{
+  "name": "brandenbyers",
+  "version": "0.0.0",
+  "homepage": "https://github.com/brndnb/brandenbyers",
+  "authors": [
+    "brndnb <branden@fermup.com>"
+  ],
+  "description": "site for brandenbyers.com",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sassy-gridlover": "~1.1.0"
+  }
+}
