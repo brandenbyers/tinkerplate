@@ -41,6 +41,7 @@
     "metalsmith-tags": "^0.6.1",
     "metalsmith-templates": "^0.6.0",
     "metalsmith-uglify": "0.0.6",
-    "metalsmith-watch": "^0.2.0"
+    "metalsmith-watch": "^0.2.0",
+    "moment": "^2.9.0"
   }
 }

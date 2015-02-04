@@ -11,6 +11,7 @@ var Metalsmith    = require('metalsmith'),
     snippet       = require('metalsmith-snippet'),
     Handlebars    = require('handlebars'),
     fs            = require('fs'),
+    moment        = require('moment')
     sass          = require('metalsmith-sass');
     autoprefixer  = require('metalsmith-autoprefixer'),
     metallic      = require('metalsmith-metallic'),
@@ -24,6 +25,9 @@ var Metalsmith    = require('metalsmith'),
 
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
+Handlebars.registerHelper("prettifyDate", function(timestamp) {
+    return moment(new Date(timestamp)).fromNow();
+});
 
 Metalsmith(__dirname)
   .use(sass({

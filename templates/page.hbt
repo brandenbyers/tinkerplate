@@ -2,6 +2,8 @@
 
 <div class="container">
 <article>
+  <h1>{{title}}</h1>
+  <p class="date">{{prettifyDate date}}</p>
   {{{contents}}}
 </article>
 </div>

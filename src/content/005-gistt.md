@@ -4,7 +4,7 @@ title: Gist Test
 category: blog
 gist: brndnb/9e3181adf626f86d881f
 snippet: 'This is an example post using auto-Gist insertion.'
-date: 2015-01-14
+date: 2015-01-25
 ---
 #This is a gist
 
