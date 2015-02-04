@@ -2,3 +2,4 @@ npm_modules
 bower_components
 node_modules
 build
+.gist
