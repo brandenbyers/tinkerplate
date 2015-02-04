@@ -21,6 +21,8 @@ var Metalsmith    = require('metalsmith'),
     headingsId    = require('metalsmith-headings-identifier'),
     watch         = require('metalsmith-watch'),
     serve         = require('metalsmith-serve');
+metadata = require('metalsmith-metadata');
+
 
 
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
@@ -51,6 +53,10 @@ Metalsmith(__dirname)
       reverse: true
     }
   }))
+  .use(metadata({
+  globals: 'globals.json',
+  
+}))
   .use(paginate({
     'collections.blog': {
     perPage: 100,
