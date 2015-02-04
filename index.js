@@ -48,7 +48,7 @@ Metalsmith(__dirname)
   .use(gist())
   .use(collections({
     blog: {
-      pattern: 'content/*.md',
+      pattern: 'blog/*.md',
       sortBy: 'date',
       reverse: true
     }
