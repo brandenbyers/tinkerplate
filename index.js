@@ -27,8 +27,8 @@ var Metalsmith    = require('metalsmith'),
 
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
-Handlebars.registerHelper("prettifyDate", function(timestamp) {
-    return moment(new Date(timestamp)).fromNow();
+Handlebars.registerHelper('prettifyDate', function(timestamp) {
+    return moment(new Date(timestamp)).format('dddd, MMMM Do YYYY');
 });
 
 Metalsmith(__dirname)
@@ -48,7 +48,7 @@ Metalsmith(__dirname)
   .use(gist())
   .use(collections({
     blog: {
-      pattern: 'blog/*.md',
+      pattern: 'posts/*.md',
       sortBy: 'date',
       reverse: true
     }
@@ -68,7 +68,7 @@ Metalsmith(__dirname)
   }
   }))
   .use(markdown())
-  .use(branch('content/*')
+  .use(branch('posts/*')
     .use(permalinks({
       pattern: ':collection/:title',
       relative: false
