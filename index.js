@@ -83,6 +83,7 @@ Metalsmith(__dirname)
   .use(templates('handlebars'))
   .use(htmlescape())
   .use(headingsId({
+    linkTemplate: "<a class='heading-anchor' href='#%s' aria-hidden='true'><span></span></a>",
     allow: "headingAnchor"
   }))
   .use(watch({
