@@ -5,7 +5,7 @@ title: Home
 
 <div class="lead-center">
   <section>
-    <h1>{{name}}</h1>
+    <h1>Name goes here</h1>
     <h2>Subtitle or Tagline Goes Here</h2>
   </section>
 </div>

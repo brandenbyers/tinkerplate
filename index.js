@@ -20,7 +20,7 @@ var Metalsmith    = require('metalsmith'),
     htmlescape    = require('metalsmith-htmlescape'),
     headingsId    = require('metalsmith-headings-identifier'),
     watch         = require('metalsmith-watch'),
-    serve         = require('metalsmith-serve');
+    serve         = require('metalsmith-serve'),
 metadata = require('metalsmith-metadata');
 
 
