@@ -9,12 +9,12 @@
 <body>
 <header class="{{bheader}}">
   <div class="container">
-  <a class="logo-text" href='/'>Your Name Here</a>
+    <a class="logo-text" href='/'>{{globals.name}}</a>
   <nav>
     <ul>
-      <li> <a href='/work'>Work</a></li>
-      <li> <a href='/blog'>Blog</a></li>
-      <li> <a href='/contact'>Contact</a></li>
+      <li><a href='/work'>Work</a></li>
+      <li><a href='/blog'>Blog</a></li>
+      <li><a href='/contact'>Contact</a></li>
     </ul>
   </nav>
   </div>

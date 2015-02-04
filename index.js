@@ -21,7 +21,7 @@ var Metalsmith    = require('metalsmith'),
     headingsId    = require('metalsmith-headings-identifier'),
     watch         = require('metalsmith-watch'),
     serve         = require('metalsmith-serve'),
-metadata = require('metalsmith-metadata');
+    metadata      = require('metalsmith-metadata');
 
 
 
@@ -54,9 +54,8 @@ Metalsmith(__dirname)
     }
   }))
   .use(metadata({
-  globals: 'globals.json',
-  
-}))
+    globals: 'globals.json',
+  }))
   .use(paginate({
     'collections.blog': {
     perPage: 100,

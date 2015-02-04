@@ -2,8 +2,12 @@
 
 <div class="container">
 <article>
-  <h1>{{title}}</h1>
-
+  <div class="lead-center">
+    <section>
+      <h1>{{title}}</h1>
+      <h2>{{subtitle}}</h2>
+    </section>
+  </div>
   {{{contents}}}
 </article>
 </div>
