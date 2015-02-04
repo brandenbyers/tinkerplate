@@ -1,5 +1,5 @@
 ---
-template: page.hbt
+template: pageNoCenter.hbt
 bheader: b-white
 title: Contact
 ---

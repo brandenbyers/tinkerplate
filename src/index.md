@@ -1,15 +1,8 @@
 ---
 template: page.hbt
-title: Home
+title: Title Goes Here
+subtitle: Subtitle goes here
 ---
-
-<div class="lead-center">
-  <section>
-    <h1>Name goes here</h1>
-    <h2>Subtitle or Tagline Goes Here</h2>
-  </section>
-</div>
-
 ##About me
 
 Sit debitis perspiciatis nostrum reiciendis ipsam alias esse excepturi ducimus deserunt impedit eaque velit accusantium harum id officiis facilis rem dignissimos, quidem. Consequuntur itaque cum quas ab dolores similique corporis?

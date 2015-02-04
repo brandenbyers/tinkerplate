@@ -1,14 +1,11 @@
 ---
-template: page.hbt
-title: First Post
+template: post.hbt
+title: This is my First Post
 collection: blog
 headingAnchor: true
 date: 2015-01-14
-snippet: 'This is an interesting first post. Seriously. Believe me. You will not
-regret reading this.'
+snippet: 'This is an interesting first post. Seriously. Believe me. You will not regret reading this.'
 ---
-#Yes, this is a post
-
 ##And there is more than you can imagine
 
 This is my first post. Consectetur odio consequatur provident omnis dolorum magni fugit. Quia officiis error deleniti accusamus vitae! Quis eius voluptates excepturi aliquam perferendis! Cupiditate totam dolor omnis earum nobis excepturi aliquid! Dolor possimus.
