@@ -4,9 +4,13 @@ bheader: b-white
 title: Contact
 ---
 
-<div class="lead-bottom">
   <section>
     <h1>Let's talk.</h1>
-    <h2><a href="mailto:mail@example.com" class="email">mail@example.com</a></h2>
+    <form id="form" action="#">
+    <p><input type="text" name="name" id="name" placeholder="NAME" />
+    <input type="text" name="email" id="email" placeholder="EMAIL"/></p>
+    <p><textarea type="text" name="message" id="message" placeholder="MESSAGE"></textarea></p>
+    <input type="submit" id="submit" value="SEND">
+    </form>
   </section>
 </div>
