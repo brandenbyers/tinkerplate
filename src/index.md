@@ -2,6 +2,7 @@
 template: page.hbt
 title: Title Goes Here
 subtitle: Subtitle goes here
+home: true
 ---
 ##About me
 

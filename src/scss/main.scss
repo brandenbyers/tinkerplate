@@ -386,6 +386,34 @@ footer a:hover{
   background-color: transparent;
 }
 
+// Forms
+
+input[type=text] {
+
+}
+
+input[type=text] :focus {
+
+}
+
+input[type=submit] {
+  border: none;
+  font-size: 17px;
+  font-weight: 100;
+  color: #fff;
+  background: $black;
+  cursor: pointer;
+  padding: 20px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  border: 2px dashed $black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  position: relative;
+  transition: none;
+}
+
 // 404 Page Not Found
 
 .lead-bottom {

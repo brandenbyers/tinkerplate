@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{title}}</title>
+  <meta name="description" content="{{globals.description}}">
+  {{#if home}}
+    <title>{{globals.name}} | Home</title>
+  {{else}}
+  <title>{{globals.name}} | {{title}}</title>
+  {{/if}}
   <link rel="stylesheet" href="/css/main.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300|Inconsolata:400,700' rel=stylesheet>
 </head>
